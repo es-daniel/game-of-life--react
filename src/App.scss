@@ -8,11 +8,13 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 80%;
-    height: 80%;
+    width: 90%;
+    height: 50%;
     margin: 5%;
     position: absolute;
     background-color: white;
+
+    
 
     &__row {
       display: flex;
@@ -20,8 +22,8 @@
       height: 100%;
 
       &__cell {
-        min-height: 0.5rem;
-        min-width: 0.5rem;
+        min-height: 0.25rem;
+        min-width: 0.25rem;
         width: 100%;
         height: 100%;
         border: 0.125rem solid lightgray;
@@ -36,12 +38,29 @@
       }
     }
   }
+ 
 
   &__buttons {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     position: absolute;
     bottom: 0;
     width: 100%;
   }
+}
+
+@media screen and (min-width: 48rem){
+  .game{
+
+    &__grid {
+      width: 80%;
+      height: 80%;
+    }
+
+    &__buttons {
+      flex-direction: row;
+    }
+  }
+  
 }
